@@ -426,37 +426,34 @@ function initVideoPlayers() {
 
     videoWrappers.forEach(wrapper => {
         const video = wrapper.querySelector('video');
-        const overlay = wrapper.querySelector('.video-play-overlay');
+
+        if (!video) return;
+
         const playBtn = wrapper.querySelector('.play-btn');
 
-        if (!video || !playBtn) return;
+        if (!playBtn) return;
 
-        // Click to play/pause
-        playBtn.addEventListener('click', () => {
-            if (video.paused) {
-                video.play();
-                overlay.classList.add('hidden');
-            }
+        // Custom Play Button Click
+        playBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Stop propagation so it doesn't trigger other clicks if potential conflicts arise
+            video.play();
         });
 
-        // Click video to pause
-        video.addEventListener('click', () => {
-            if (!video.paused) {
-                video.pause();
-                overlay.classList.remove('hidden');
-            }
+        // Note: We do NOT add a generic click listener to the wrapper or video here.
+        // We rely on the native 'controls' attribute for user interaction (seeking, pausing, playing via control bar).
+        // Clicking the video area itself is handled natively by the browser when 'controls' is present.
+
+        // State management driven by video events
+        video.addEventListener('play', () => {
+            wrapper.classList.add('playing');
         });
 
-        // Show overlay when video ends
-        video.addEventListener('ended', () => {
-            overlay.classList.remove('hidden');
-        });
-
-        // Handle pause
         video.addEventListener('pause', () => {
-            if (!video.ended) {
-                overlay.classList.remove('hidden');
-            }
+            wrapper.classList.remove('playing');
+        });
+
+        video.addEventListener('ended', () => {
+            wrapper.classList.remove('playing');
         });
     });
 }
@@ -630,6 +627,77 @@ function initWorkCards() {
                 ease: 'power2.out'
             });
         });
+    });
+}
+
+// ============================================
+// CAROUSEL FUNCTIONALITY
+// ============================================
+
+function initCarousel() {
+    const carousel = document.querySelector('.quick-links-carousel');
+    if (!carousel) return;
+
+    const track = carousel.querySelector('.carousel-track');
+    const cards = carousel.querySelectorAll('.carousel-card');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+
+    if (!track || cards.length === 0) return;
+
+    let currentIndex = 0;
+    const totalCards = cards.length;
+
+    function updateCarousel() {
+        // Calculate card width including gap
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 32; // 2rem gap
+        const offset = currentIndex * (cardWidth + gap);
+
+        gsap.to(track, {
+            x: -offset,
+            duration: 0.5,
+            ease: 'power2.out'
+        });
+
+        // Update dots
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+
+        // Update button states
+        prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
+        nextBtn.style.opacity = currentIndex === totalCards - 1 ? '0.3' : '1';
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < totalCards - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateCarousel();
+        });
+    });
+
+    // Initialize
+    updateCarousel();
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+        updateCarousel();
     });
 }
 
@@ -911,7 +979,7 @@ function initTechPage() {
 function initSmoothScroll() {
     // Handle anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
 
@@ -983,6 +1051,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSplitting();
     initThreeJS();
     initVideoPlayers();
+    initCarousel();
     initSmoothScroll();
     setCurrentYear();
     handleResize();
