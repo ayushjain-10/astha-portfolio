@@ -818,6 +818,7 @@ section {
 
 .marquee-content {
     display: flex;
+    align-items: center;
     animation: marquee 30s linear infinite;
 }
 
