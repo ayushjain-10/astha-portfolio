@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choreography | Astha Shreeshreemal</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Splitting.js -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-choreography">
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-text">
+                <span>C</span><span>H</span><span>O</span><span>R</span><span>E</span><span>O</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav nav-dark">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">ASTHA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="choreography.html" class="nav-link active" data-text="Choreography">Choreography</a>
+                <a href="performance.html" class="nav-link" data-text="Performance">Performance</a>
+                <a href="curiosity.html" class="nav-link" data-text="Curiosity">Curiosity</a>
+                <a href="tech.html" class="nav-link" data-text="Tech">Tech</a>
+                <a href="about.html" class="nav-link" data-text="About">About</a>
+                <a href="resume.html" class="nav-link" data-text="Resume">Resume</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="choreography.html" class="mobile-link active">Choreography</a>
+            <a href="performance.html" class="mobile-link">Performance</a>
+            <a href="curiosity.html" class="mobile-link">Curiosity</a>
+            <a href="tech.html" class="mobile-link">Tech</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="resume.html" class="mobile-link">Resume</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <div class="header-gradient"></div>
+            <div class="header-noise"></div>
+        </div>
+
+        <div class="container">
+            <div class="page-header-content">
+                <span class="page-tag">My Work</span>
+                <h1 class="page-title page-title-nowrap" data-splitting>Choreography</h1>
+                <p class="page-subtitle">Original dance pieces that tell stories through movement. Each choreography is
+                    a journey of emotion, technique, and creative expression.</p>
+            </div>
+        </div>
+
+        <div class="header-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section 1 - Nayi -->
+    <section class="video-section" id="nayi">
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video class="featured-video" controls playsinline poster="">
+                    <source src="videos/Allure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-play-overlay">
+                    <button class="play-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-info">
+            <div class="container">
+                <div class="video-info-grid">
+                    <div class="video-details">
+                        <span class="video-number">01</span>
+                        <h2 class="video-title">Allure</h2>
+                        <p class="video-description">
+                            Allure is a contemporary dance work that brings traditional Indian elements into conversation with modern movement practices. The piece acts as a bridge between Indian cultural roots and contemporary thinking, with a strong emphasis on musicality to shape both movement and emotional rhythm.
+                            Lighting is used intentionally to reflect the dancers internal experiences, allowing the audience to feel the moment rather than simply observe it. Conceptually, Allure explores femininity and the evolving understanding of beauty. While earlier notions of beauty were often rooted in external appearance, the work traces a shift toward inner awareness and emotional depth.
+                            Through the integration of Indian movement elements and contemporary vocabulary, Allure reframes tradition as a living, evolving practice—inviting dancers and viewers to experience beauty as something felt from within rather than seen on the surface.
+                        </p>
+                    </div>
+                    <div class="video-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Style</span>
+                            <span class="meta-value">Contemporary / Fusion</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">5:24</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Choreographer</span>
+                            <span class="meta-value">Astha Shreeshreemal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section 2 - Vid3 -->
+    <section class="video-section" id="vid3">
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video class="featured-video" controls playsinline poster="">
+                    <source src="videos/Delusions.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-play-overlay">
+                    <button class="play-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-info">
+            <div class="container">
+                <div class="video-info-grid">
+                    <div class="video-details">
+                        <span class="video-number">02</span>
+                        <h2 class="video-title">Delusions</h2>
+                        <p class="video-description">
+                            Delusions is a contemporary dance work that examines the tension between perception and reality. The piece explores how internal narratives, expectations, and emotional states shape the way individuals experience the world around them. Through layered movement and shifting dynamics, the choreography reflects moments of clarity, distortion, and fragmentation.
+                            The dancers navigate cycles of control and release, revealing how delusions can both protect and confine the self. By emphasizing contrast in energy, rhythm, and spatial relationships, Delusions invites the audience to question what is real, what is imagined, and how easily the two begin to blur.
+                        </p>
+                    </div>
+                    <div class="video-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Style</span>
+                            <span class="meta-value">Hip-Hop / Contemporary</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">5:09</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Choreographer</span>
+                            <span class="meta-value">Astha Shreeshreemal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Process Section -->
+    <section class="creative-process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Behind The Scenes</span>
+                <h2 class="section-title" data-splitting>My Creative Process</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <span class="process-number">01</span>
+                    <h3>Inspiration</h3>
+                    <p>Every piece begins with a spark - a song, an emotion, a story waiting to be told through
+                        movement.</p>
+                </div>
+
+                <div class="process-card">
+                    <span class="process-number">02</span>
+                    <h3>Exploration</h3>
+                    <p>I explore different movements, rhythms, and dynamics, letting the body discover what the music
+                        wants to say.</p>
+                </div>
+
+                <div class="process-card">
+                    <span class="process-number">03</span>
+                    <h3>Refinement</h3>
+                    <p>Each movement is crafted and polished, ensuring every gesture carries meaning and intention.</p>
+                </div>
+
+                <div class="process-card">
+                    <span class="process-number">04</span>
+                    <h3>Performance</h3>
+                    <p>The final piece comes alive, connecting with the audience through the universal language of
+                        dance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want to see more?</h2>
+                <p>Check out my performance highlights or learn about my journey in dance and technology.</p>
+                <div class="cta-buttons">
+                    <a href="performance.html" class="btn btn-primary">
+                        <span class="btn-text">Watch Performances</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="about.html" class="btn btn-secondary">
+                        <span class="btn-text">About Me</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ASTHA</span>
+                    <p>Dance + Tech Creative</p>
+                </div>
+
+                <div class="footer-center">
+                    <div class="footer-links">
+                        <a href="choreography.html">Choreography</a>
+                        <a href="performance.html">Performance</a>
+                        <a href="curiosity.html">Curiosity</a>
+                        <a href="tech.html">Tech</a>
+                        <a href="about.html">About</a>
+                        <a href="resume.html">Resume</a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Astha Shreeshreemal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

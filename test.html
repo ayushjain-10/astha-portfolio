@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Content Visibility</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0a0a0a; color: white; font-family: sans-serif; }
+        section { min-height: 100vh; padding: 4rem; border-bottom: 1px solid #333; }
+        h1 { font-size: 4rem; color: #00ff88; margin-bottom: 2rem; }
+        p { font-size: 1.2rem; line-height: 1.8; max-width: 800px; }
+    </style>
+</head>
+<body>
+    <section id="hero" style="display: flex; align-items: center; justify-content: center;">
+        <h1>ASTHA SHREESHREEMAL</h1>
+    </section>
+    
+    <section id="about" style="background: linear-gradient(180deg, #0a0a0a, #1a1a1a, #0a0a0a);">
+        <h1>About Me</h1>
+        <p>This is the about section. If you can see this text, the HTML and CSS are working correctly.</p>
+        <p style="margin-top: 2rem;">The issue with your main site might be GSAP hiding content or a script error.</p>
+    </section>
+    
+    <section id="stats" style="background: #0f0f0f;">
+        <h1>Stats Section</h1>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 2rem;">
+            <div style="background: #1a1a1a; padding: 2rem; border-radius: 16px;">
+                <div style="font-size: 3rem; color: #00ff88;">10</div>
+                <div>Years Dancing</div>
+            </div>
+            <div style="background: #1a1a1a; padding: 2rem; border-radius: 16px;">
+                <div style="font-size: 3rem; color: #00ff88;">50</div>
+                <div>Performances</div>
+            </div>
+            <div style="background: #1a1a1a; padding: 2rem; border-radius: 16px;">
+                <div style="font-size: 3rem; color: #00ff88;">100</div>
+                <div>Students Taught</div>
+            </div>
+            <div style="background: #1a1a1a; padding: 2rem; border-radius: 16px;">
+                <div style="font-size: 3rem; color: #00ff88;">25</div>
+                <div>Awards Won</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="performances" style="background: linear-gradient(180deg, #0f0f0f, #1a1a1a, #0a0a0a);">
+        <h1>Performances</h1>
+        <p>Performance cards would go here. This proves the sections CAN render.</p>
+    </section>
+</body>
+</html>
+
+
+
+
+

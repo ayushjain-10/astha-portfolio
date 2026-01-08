@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance | Astha Shreeshreemal</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Splitting.js -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-performance">
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-text">
+                <span>S</span><span>T</span><span>A</span><span>G</span><span>E</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav nav-dark">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">ASTHA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="choreography.html" class="nav-link" data-text="Choreography">Choreography</a>
+                <a href="performance.html" class="nav-link active" data-text="Performance">Performance</a>
+                <a href="curiosity.html" class="nav-link" data-text="Curiosity">Curiosity</a>
+                <a href="tech.html" class="nav-link" data-text="Tech">Tech</a>
+                <a href="about.html" class="nav-link" data-text="About">About</a>
+                <a href="resume.html" class="nav-link" data-text="Resume">Resume</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="choreography.html" class="mobile-link">Choreography</a>
+            <a href="performance.html" class="mobile-link active">Performance</a>
+            <a href="curiosity.html" class="mobile-link">Curiosity</a>
+            <a href="tech.html" class="mobile-link">Tech</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="resume.html" class="mobile-link">Resume</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header page-header-performance">
+        <div class="page-header-bg">
+            <div class="header-gradient"></div>
+            <div class="header-noise"></div>
+        </div>
+
+        <div class="container">
+            <div class="page-header-content">
+                <span class="page-tag">Live Shows</span>
+                <h1 class="page-title page-title-nowrap" data-splitting>Performance</h1>
+                <p class="page-subtitle">Bringing energy and emotion to the stage. Experience the magic of live dance
+                    performance.</p>
+            </div>
+        </div>
+
+        <div class="header-scroll-indicator">
+            <span>Scroll to watch</span>
+            <div class="scroll-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="performance-hero">
+        <div class="performance-video-full">
+            <div class="video-wrapper video-wrapper-cinematic">
+                <video class="featured-video" controls playsinline poster="">
+                    <source src="videos/Nayi.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-play-overlay video-play-overlay-large">
+                    <button class="play-btn play-btn-large">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        <span class="play-text">Play Video</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="performance-info-overlay">
+            <div class="container">
+                <div class="performance-details">
+                    <h2 class="performance-title">Nayi</h2>
+                    <p class="performance-subtitle">A captivating stage performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Details -->
+    <section class="performance-details-section">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-content">
+                    <span class="section-tag">About This Performance</span>
+                    <h2 class="section-title" data-splitting>Nayi</h2>
+                    <p class="details-text">
+                        As a performer in "Nayi", I engage with the idea of transformation and becoming through the body. The work explores the meaning of “nayi” as newness and renewal, and my role within the choreography requires me to move between familiarity and change. Through repetition, resistance, and release, I experience how transformation is physically negotiated rather than simply represented.
+                        The movement language draws from contemporary techniques while remaining informed by cultural memory. As a performer, I navigate this intersection by embodying gestures that carry history while allowing them to evolve into new forms. This process challenges me to remain present, adaptable, and responsive, emphasizing internal awareness over fixed aesthetics.
+                    </p>
+                    <p class="details-text">
+                        This piece showcases a blend of contemporary techniques with elements of classical
+                        and modern dance, creating a unique visual experience that resonates with viewers
+                        on a profound level.
+                    </p>
+                </div>
+
+                <div class="details-stats">
+                    <div class="stat-card">
+                        <span class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </span>
+                        <span class="stat-value">4:20</span>
+                        <span class="stat-label">Duration</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18V5l12-2v13" />
+                                <circle cx="6" cy="18" r="3" />
+                                <circle cx="18" cy="16" r="3" />
+                            </svg>
+                        </span>
+                        <span class="stat-value">Fusion</span>
+                        <span class="stat-label">Style</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </span>
+                        <span class="stat-value">Live</span>
+                        <span class="stat-label">Venue</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Performance Video -->
+    <section class="performance-hero">
+        <div class="performance-video-full">
+            <div class="video-wrapper video-wrapper-cinematic">
+                <video class="featured-video" controls playsinline poster="">
+                    <source src="videos/vid6.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-play-overlay video-play-overlay-large">
+                    <button class="play-btn play-btn-large">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        <span class="play-text">Play Video</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="performance-info-overlay">
+            <div class="container">
+                <div class="performance-details">
+                    <h2 class="performance-title">Blaze</h2>
+                    <p class="performance-subtitle">A captivating stage performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Details -->
+    <section class="performance-details-section">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-content">
+                    <span class="section-tag">About This Performance</span>
+                    <h2 class="section-title" data-splitting>Blaze</h2>
+                    <p class="details-text">
+                        As a performer in Blaze, I engage with intensity, momentum, and sustained energy as core physical and emotional drivers of the work. The choreography demands a heightened state of presence, requiring me to navigate speed, force, and control while remaining responsive to the ensemble. Through this process, I explore how energy is generated, contained, and released within the body.
+                        The work emphasizes dynamic shifts and continuous motion, challenging me to balance precision with instinct. As a performer, I experience Blaze as an investigation of endurance and transformation, where physical exertion becomes a tool for accessing emotional clarity and resilience. The movement requires both strength and vulnerability, allowing intensity to function as a form of expression rather than spectacle.
+                    </p>
+                    <p class="details-text">
+                        This piece showcases a blend of contemporary techniques with elements of classical
+                        and modern dance, creating a unique visual experience that resonates with viewers
+                        on a profound level.
+                    </p>
+                </div>
+
+                <div class="details-stats">
+                    <div class="stat-card">
+                        <span class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </span>
+                        <span class="stat-value">4:20</span>
+                        <span class="stat-label">Duration</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18V5l12-2v13" />
+                                <circle cx="6" cy="18" r="3" />
+                                <circle cx="18" cy="16" r="3" />
+                            </svg>
+                        </span>
+                        <span class="stat-value">Fusion</span>
+                        <span class="stat-label">Style</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </span>
+                        <span class="stat-value">Live</span>
+                        <span class="stat-label">Venue</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Performance Highlights -->
+    <section class="performance-highlights">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Highlights</span>
+                <h2 class="section-title" data-splitting>Performance Elements</h2>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-number">01</div>
+                    <h3>Expressive Movement</h3>
+                    <p>Each gesture tells a story, conveying emotions that words cannot express.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-number">02</div>
+                    <h3>Musical Interpretation</h3>
+                    <p>The choreography flows seamlessly with the music, creating a unified experience.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-number">03</div>
+                    <h3>Stage Presence</h3>
+                    <p>Commanding attention and creating connection with every member of the audience.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-number">04</div>
+                    <h3>Technical Precision</h3>
+                    <p>Flawless execution of complex movements and transitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Explore More</h2>
+                <p>See my original choreography or learn about my creative journey.</p>
+                <div class="cta-buttons">
+                    <a href="choreography.html" class="btn btn-primary">
+                        <span class="btn-text">View Choreography</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="about.html" class="btn btn-secondary">
+                        <span class="btn-text">About Me</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ASTHA</span>
+                    <p>Dance + Tech Creative</p>
+                </div>
+
+                <div class="footer-center">
+                    <div class="footer-links">
+                        <a href="choreography.html">Choreography</a>
+                        <a href="performance.html">Performance</a>
+                        <a href="curiosity.html">Curiosity</a>
+                        <a href="tech.html">Tech</a>
+                        <a href="about.html">About</a>
+                        <a href="resume.html">Resume</a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Astha Shreeshreemal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

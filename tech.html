@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Projects | Astha Shreeshreemal</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Splitting.js -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-tech">
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-text">
+                <span>&lt;</span><span>/</span><span>&gt;</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav nav-dark">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">ASTHA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="choreography.html" class="nav-link" data-text="Choreography">Choreography</a>
+                <a href="performance.html" class="nav-link" data-text="Performance">Performance</a>
+                <a href="curiosity.html" class="nav-link" data-text="Curiosity">Curiosity</a>
+                <a href="tech.html" class="nav-link active" data-text="Tech">Tech</a>
+                <a href="about.html" class="nav-link" data-text="About">About</a>
+                <a href="resume.html" class="nav-link" data-text="Resume">Resume</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="choreography.html" class="mobile-link">Choreography</a>
+            <a href="performance.html" class="mobile-link">Performance</a>
+            <a href="curiosity.html" class="mobile-link">Curiosity</a>
+            <a href="tech.html" class="mobile-link active">Tech</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="resume.html" class="mobile-link">Resume</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header page-header-tech">
+        <canvas id="tech-canvas"></canvas>
+
+
+
+        <div class="container" style="display: flex; justify-content: center; align-items: center;">
+            <div class="page-header-content">
+                <span class="page-tag">Code + Creativity</span>
+                <h1 class="page-title" data-splitting>Tech Projects</h1>
+                <p class="page-subtitle">Where code meets creativity. Exploring the intersection of technology and
+                    artistic expression.</p>
+            </div>
+        </div>
+
+        <div class="code-decoration" style="margin-right: 10rem;">
+            <pre><code>const create = (art, tech) => {
+  return art.map(idea =>
+    tech.transform(idea)
+  );
+};</code></pre>
+        </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title" data-splitting>Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card project-card-featured">
+                    <div class="project-visual">
+                        <div class="project-preview">
+                            <div class="preview-placeholder">
+                                <span class="preview-icon">&lt;/&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Design</span>
+                        <h3 class="project-title">Personal Portfolio</h3>
+                        <p class="project-description">
+                            This very website! A creative portfolio blending dance and technology,
+                            featuring interactive animations, 3D elements, and immersive video experiences.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>GSAP</span>
+                            <span>Three.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-preview">
+                            <div class="preview-placeholder">
+                                <span class="preview-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 18V5l12-2v13" />
+                                        <circle cx="6" cy="18" r="3" />
+                                        <circle cx="18" cy="16" r="3" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Creative Coding</span>
+                        <h3 class="project-title">Dance Visualizer</h3>
+                        <p class="project-description">
+                            An audio-reactive visualization that transforms music into dynamic visual patterns,
+                            exploring the relationship between sound and movement.
+                        </p>
+                        <div class="project-tech">
+                            <span>p5.js</span>
+                            <span>Web Audio API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-preview">
+                            <div class="preview-placeholder">
+                                <span class="preview-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polygon points="10 8 16 12 10 16 10 8" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Video Production</span>
+                        <h3 class="project-title">Dance Reels</h3>
+                        <p class="project-description">
+                            Short-form dance content created for social media, combining choreography
+                            with creative video editing and visual effects.
+                        </p>
+                        <div class="project-tech">
+                            <span>Premiere Pro</span>
+                            <span>After Effects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card project-card-coming-soon">
+                    <div class="project-visual">
+                        <div class="project-preview">
+                            <div class="preview-placeholder">
+                                <span class="preview-icon">?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Coming Soon</span>
+                        <h3 class="project-title">More Projects</h3>
+                        <p class="project-description">
+                            New projects are always in development. Stay tuned for more creative
+                            experiments at the intersection of dance and technology.
+                        </p>
+                        <div class="project-tech">
+                            <span>In Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Showcase -->
+    <section class="code-showcase">
+        <div class="container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <span class="section-tag">Code + Movement</span>
+                    <h2 class="section-title" data-splitting>Coding Philosophy</h2>
+                    <p class="showcase-text">
+                        Just like choreography, good code tells a story. It has rhythm, structure,
+                        and purpose. Every function, every variable is a movement in a larger dance
+                        of logic and creativity.
+                    </p>
+                    <p class="showcase-text">
+                        I approach coding the same way I approach dance - with curiosity, patience,
+                        and a willingness to experiment until the pieces fall into place.
+                    </p>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-dot"></span>
+                        <span class="code-dot"></span>
+                        <span class="code-dot"></span>
+                        <span class="code-filename">creativity.js</span>
+                    </div>
+                    <pre><code class="code-content">
+<span class="code-keyword">const</span> <span class="code-function">createArt</span> = (<span class="code-param">passion</span>, <span class="code-param">skill</span>) => {
+  <span class="code-keyword">const</span> vision = passion.<span class="code-method">imagine</span>();
+  <span class="code-keyword">const</span> expression = skill.<span class="code-method">execute</span>(vision);
+
+  <span class="code-keyword">return</span> expression
+    .<span class="code-method">polish</span>()
+    .<span class="code-method">share</span>()
+    .<span class="code-method">inspire</span>();
+};
+
+<span class="code-comment">// Never stop creating</span>
+<span class="code-keyword">while</span> (<span class="code-boolean">true</span>) {
+  <span class="code-function">createArt</span>(dance, technology);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's Build Something Together</h2>
+                <p>Interested in collaborating on a creative tech project?</p>
+                <div class="cta-buttons">
+                    <a href="mailto:asthashreeshreemal@gmail.com" class="btn btn-primary">
+                        <span class="btn-text">Get In Touch</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="choreography.html" class="btn btn-secondary">
+                        <span class="btn-text">See My Dance Work</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ASTHA</span>
+                    <p>Dance + Tech Creative</p>
+                </div>
+
+                <div class="footer-center">
+                    <div class="footer-links">
+                        <a href="choreography.html">Choreography</a>
+                        <a href="performance.html">Performance</a>
+                        <a href="curiosity.html">Curiosity</a>
+                        <a href="tech.html">Tech</a>
+                        <a href="about.html">About</a>
+                        <a href="resume.html">Resume</a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Astha Shreeshreemal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

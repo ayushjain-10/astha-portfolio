@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Astha Shreeshreemal</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Splitting.js -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-about">
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-text">
+                <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav nav-dark">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">ASTHA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="choreography.html" class="nav-link" data-text="Choreography">Choreography</a>
+                <a href="performance.html" class="nav-link" data-text="Performance">Performance</a>
+                <a href="curiosity.html" class="nav-link" data-text="Curiosity">Curiosity</a>
+                <a href="tech.html" class="nav-link" data-text="Tech">Tech</a>
+                <a href="about.html" class="nav-link active" data-text="About">About</a>
+                <a href="resume.html" class="nav-link" data-text="Resume">Resume</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="choreography.html" class="mobile-link">Choreography</a>
+            <a href="performance.html" class="mobile-link">Performance</a>
+            <a href="curiosity.html" class="mobile-link">Curiosity</a>
+            <a href="tech.html" class="mobile-link">Tech</a>
+            <a href="about.html" class="mobile-link active">About</a>
+            <a href="resume.html" class="mobile-link">Resume</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-grid">
+                <div class="about-hero-image">
+                    <div class="image-container">
+                        <img src="photos/about_me.jpg" alt="Astha Shreeshreemal">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="image-decoration-1"></div>
+                    <div class="image-decoration-2"></div>
+                </div>
+
+                <div class="about-hero-content" style="padding-left: 4rem;">
+                    <span class="section-tag">About Me</span>
+                    <h1 class="page-title page-title-inline" data-splitting>Astha Shreeshreemal</h1>
+                    <p class="about-tagline">Dancer. Choreographer. Technologist. Creator.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <span class="section-tag">My Story</span>
+                    <h2 class="section-title" data-splitting>The Journey So Far</h2>
+
+                    <div class="story-text">
+                        <p>
+                           My journey in dance is grounded in rigorous training, research-driven practice, and a sustained engagement with cultural inquiry. 
+                           I have trained across multiple styles, which provided me with a strong technical foundation and an understanding of discipline and structure.
+                           Over time, my interests shifted toward contemporary and modern dance practices, where I found greater space for experimentation, conceptual thinking, and embodied research. 
+                        </p>
+                        <p>
+                            Research plays a central role in my choreographic process. I approach movement creation through observation, analysis, and contextual study drawing from cultural histories, lived experiences, and physical systems. 
+                            I am particularly interested in how cultural memory, rhythm, and social context influence the way bodies move, relate, and communicate. Before entering the studio, I often engage in research through writing, visual references, music, and conversations, allowing cultural narratives to inform the movement vocabulary that emerges.
+                        </p>
+                        <p>
+                            As a choreographer, I view dance as both a physical practice and a cultural archive. My work seeks to honor and reinterpret cultural values without reducing them to aesthetic motifs. Instead, I focus on intention, process, and meaning—examining how movement can carry cultural significance while remaining adaptable to contemporary contexts. 
+                            Concepts such as energy transfer, repetition, and cause-and-effect frequently appear in my work as ways to bridge physical theory with cultural and emotional experience.
+                            Navigating spaces shaped by traditional expectations has strengthened my commitment to developing an authentic movement language rooted in research and cultural awareness. By prioritizing contemporary and modern forms, I continue to question hierarchy within dance training and explore choreography as a site for dialogue, reflection, and exchange.
+                            Currently, my practice continues to expand through choreography, teaching, and collaborative projects. I see my journey in dance as an evolving research process—one that integrates cultural value, critical thinking, and embodied exploration to create work that is both conceptually grounded and experientially resonant.
+                        </p>
+                        <p>
+                          Navigating spaces shaped by traditional expectations has strengthened my commitment to developing an authentic movement language rooted in research and cultural awareness. 
+                          By prioritizing contemporary and modern forms, I continue to question hierarchy within dance training and explore choreography as a site for dialogue, reflection, and exchange.
+                          Currently, my practice continues to expand through choreography, teaching, and collaborative projects. I see my journey in dance as an evolving research process—one that integrates cultural value, critical thinking, and embodied exploration to create work that is both conceptually grounded and experientially resonant.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="story-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">Early Years</span>
+                        <h3>First Steps in Dance</h3>
+                        <p>Discovered the joy of movement and began formal training in multiple dance styles.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-year">Growth</span>
+                        <h3>Expanding Horizons</h3>
+                        <p>Trained in Hip-Hop, Contemporary, Bollywood, and Classical forms while exploring
+                            choreography.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-year">Discovery</span>
+                        <h3>Meeting Technology</h3>
+                        <p>Found a passion for tech, learning to code and exploring the intersection of art and
+                            technology.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-year">Present</span>
+                        <h3>Bridging Worlds</h3>
+                        <p>Creating at the intersection of dance and tech, constantly pushing creative boundaries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title" data-splitting>Skills & Specialties</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Dance Styles</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="skill-name">Hip-Hop</span>
+                            <span class="skill-bar"><span style="width: 95%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Contemporary</span>
+                            <span class="skill-bar"><span style="width: 90%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Bollywood</span>
+                            <span class="skill-bar"><span style="width: 92%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Classical</span>
+                            <span class="skill-bar"><span style="width: 85%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Fusion</span>
+                            <span class="skill-bar"><span style="width: 95%"></span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Technology</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="skill-name">Light Design</span>
+                            <span class="skill-bar"><span style="width: 85%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Sound Design</span>
+                            <span class="skill-bar"><span style="width: 85%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Video Production</span>
+                            <span class="skill-bar"><span style="width: 90%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Adobe Premiere Pro</span>
+                            <span class="skill-bar"><span style="width: 95%"></span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Creative Direction</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="skill-name">Choreography</span>
+                            <span class="skill-bar"><span style="width: 98%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Stage Direction</span>
+                            <span class="skill-bar"><span style="width: 90%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Event Planning</span>
+                            <span class="skill-bar"><span style="width: 85%"></span></span>
+                        </li>
+                        <li>
+                            <span class="skill-name">Teaching</span>
+                            <span class="skill-bar"><span style="width: 92%"></span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Philosophy</span>
+                <h2 class="section-title" data-splitting>What I Believe In</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <p>Every day is an opportunity to learn something new, to grow, and to evolve as an artist and
+                        person.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <h3>Authentic Expression</h3>
+                    <p>Art is most powerful when it comes from a place of genuine emotion and personal truth.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4" />
+                            <path d="M12 8h.01" />
+                        </svg>
+                    </div>
+                    <h3>Embracing Curiosity</h3>
+                    <p>Asking questions and exploring the unknown leads to the most exciting discoveries.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Community & Connection</h3>
+                    <p>Dance is about connection - with the music, with the audience, and with fellow artists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="contact-cta-content">
+                <h2>Let's Create Something Together</h2>
+                <p>For collaborations, bookings, or just to say hello.</p>
+                <a href="mailto:asthashreeshreemal@gmail.com" class="btn btn-primary btn-large">
+                    <span class="btn-text">Get In Touch</span>
+                    <span class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ASTHA</span>
+                    <p>Dance + Tech Creative</p>
+                </div>
+
+                <div class="footer-center">
+                    <div class="footer-links">
+                        <a href="choreography.html">Choreography</a>
+                        <a href="performance.html">Performance</a>
+                        <a href="curiosity.html">Curiosity</a>
+                        <a href="tech.html">Tech</a>
+                        <a href="about.html">About</a>
+                        <a href="resume.html">Resume</a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Astha Shreeshreemal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

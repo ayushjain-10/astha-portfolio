@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosity | Astha Shreeshreemal</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Splitting.js -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-curiosity">
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-text">
+                <span>?</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav nav-dark">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">ASTHA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="choreography.html" class="nav-link" data-text="Choreography">Choreography</a>
+                <a href="performance.html" class="nav-link" data-text="Performance">Performance</a>
+                <a href="curiosity.html" class="nav-link active" data-text="Curiosity">Curiosity</a>
+                <a href="tech.html" class="nav-link" data-text="Tech">Tech</a>
+                <a href="about.html" class="nav-link" data-text="About">About</a>
+                <a href="resume.html" class="nav-link" data-text="Resume">Resume</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="choreography.html" class="mobile-link">Choreography</a>
+            <a href="performance.html" class="mobile-link">Performance</a>
+            <a href="curiosity.html" class="mobile-link active">Curiosity</a>
+            <a href="tech.html" class="mobile-link">Tech</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="resume.html" class="mobile-link">Resume</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="curiosity-hero">
+        <canvas id="curiosity-canvas"></canvas>
+
+        <div class="container">
+            <div class="curiosity-hero-content"
+                style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <div class="curiosity-statement">
+                    <h1 class="curiosity-title" data-splitting>
+                        <span class="title-small">Who Is She</span>
+                    </h1>
+                </div>
+
+                <div class="curiosity-intro">
+                    <p class="curiosity-text large-text">
+                        Curiosity isn't just a trait - it's the force that drives everything I do.
+                        It's the question "what if?" that leads to new choreography, new code, new possibilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="floating-elements">
+            <div class="floating-shape shape-1">?</div>
+            <div class="floating-shape shape-2">!</div>
+            <div class="floating-shape shape-3">*</div>
+        </div>
+    </section>
+
+    <!-- Questions Section -->
+    <section class="questions-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">What Drives Me</span>
+                <h2 class="section-title" data-splitting>Questions I Ask</h2>
+            </div>
+
+            <div class="questions-grid">
+                <div class="question-card">
+                    <div class="question-icon">?</div>
+                    <h3>How can movement tell a story?</h3>
+                    <p>I explore the infinite ways the body can communicate emotions, narratives, and abstract concepts.
+                    </p>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-icon">?</div>
+                    <h3>Where do art and technology intersect?</h3>
+                    <p>The fusion of creative expression and digital innovation fascinates me endlessly.</p>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-icon">?</div>
+                    <h3>What makes performance memorable?</h3>
+                    <p>I'm constantly seeking the elements that create lasting impact and emotional connection.</p>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-icon">?</div>
+                    <h3>How can I push my boundaries?</h3>
+                    <p>Growth comes from stepping outside comfort zones and embracing the unknown.</p>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-icon">?</div>
+                    <h3>What's possible with code and creativity?</h3>
+                    <p>Building interactive experiences that blend artistic vision with technical skill.</p>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-icon">?</div>
+                    <h3>How do different cultures move?</h3>
+                    <p>Learning from diverse dance traditions and finding universal threads of expression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exploration Areas -->
+    <section class="exploration-section">
+        <div class="container">
+            <div class="exploration-grid">
+                <div class="exploration-content">
+                    <span class="section-tag">Areas of Exploration</span>
+                    <h2 class="section-title" data-splitting>Where Curiosity Leads Me</h2>
+                    <p class="exploration-text">
+                        Curiosity functions as a foundational methodology within my artistic practice. It drives the way I approach movement, choreography, and interdisciplinary exploration. Rather than working from fixed outcomes, I begin with questions about the body, space, perception, and experience, allowing these questions to guide both research and creation. 
+                        This openness to inquiry enables my work to remain process driven, adaptive, and responsive.
+                        My curiosity extends beyond traditional dance frameworks and into technological and experimental domains. I actively engage with digital tools such as Unity as platforms for creative research rather than solely as technical software. 
+                        Within these environments, I explore virtual space, interactivity, and spatial composition, examining how choreographic ideas can translate across physical and digital contexts. Technology becomes a site of experimentation that challenges my understanding of embodiment, presence, and audience engagement
+                        This research oriented curiosity also shapes how I learn and create. I am drawn to unfamiliar tools and disciplines, using trial, iteration, and failure as integral parts of the creative process.
+                        By positioning curiosity as a strength rather than uncertainty, I am able to integrate technology, movement, and conceptual thinking into a cohesive and evolving practice.
+                        Ultimately, curiosity allows me to expand the boundaries of dance by treating it as a living system informed by research, experimentation, and interdisciplinary dialogue. 
+                        It supports my goal of creating work that is embodied, conceptually grounded, and responsive to contemporary artistic and technological contexts.
+                    </p>
+                </div>
+
+                <div class="exploration-areas">
+                    <div class="area-item">
+                        <span class="area-number">01</span>
+                        <div class="area-content">
+                            <h3>Dance Forms</h3>
+                            <p>Contemporary, Hip-Hop, Bollywood, Classical, Fusion - every style teaches something new.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="area-item">
+                        <span class="area-number">02</span>
+                        <div class="area-content">
+                            <h3>Technology</h3>
+                            <p>Light Design, Sound Design, Video Production and Adobe Premiere Pro</p>
+                        </div>
+                    </div>
+
+                    <div class="area-item">
+                        <span class="area-number">03</span>
+                        <div class="area-content">
+                            <h3>Storytelling</h3>
+                            <p>Finding narratives in movement, music, and moments that resonate with audiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="area-item">
+                        <span class="area-number">04</span>
+                        <div class="area-content">
+                            <h3>Human Connection</h3>
+                            <p>Understanding how art creates bonds between performer and audience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-wrapper">
+                <div class="philosophy-visual">
+                    <div class="infinity-symbol">
+                        <svg viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="3">
+                            <path
+                                d="M50 50 C50 20, 10 20, 10 50 C10 80, 50 80, 50 50 C50 20, 90 20, 90 50 C90 80, 50 80, 50 50"
+                                transform="translate(55, 0)" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="philosophy-content">
+                    <h2 class="philosophy-title">The Endless Loop of Learning</h2>
+                    <p class="philosophy-text">
+                        Curiosity begets knowledge. Knowledge inspires questions.
+                        Questions fuel curiosity. This infinite loop is the engine of my creative life.
+                    </p>
+                    <p class="philosophy-text">
+                        I believe that staying curious means staying alive to possibilities.
+                        Every day brings new things to learn, new perspectives to consider,
+                        and new ways to express what it means to be human.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want to know more?</h2>
+                <p>Discover my journey and the experiences that shaped who I am today.</p>
+                <div class="cta-buttons">
+                    <a href="about.html" class="btn btn-primary">
+                        <span class="btn-text">Read My Story</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="tech.html" class="btn btn-secondary">
+                        <span class="btn-text">Tech Projects</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ASTHA</span>
+                    <p>Dance + Tech Creative</p>
+                </div>
+
+                <div class="footer-center">
+                    <div class="footer-links">
+                        <a href="choreography.html">Choreography</a>
+                        <a href="performance.html">Performance</a>
+                        <a href="curiosity.html">Curiosity</a>
+                        <a href="tech.html">Tech</a>
+                        <a href="about.html">About</a>
+                        <a href="resume.html">Resume</a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Astha Shreeshreemal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

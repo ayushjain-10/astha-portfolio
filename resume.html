@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Astha Shreeshreemal</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Splitting.js -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-resume">
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-text">
+                <span>C</span><span>V</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav nav-dark">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">ASTHA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="choreography.html" class="nav-link" data-text="Choreography">Choreography</a>
+                <a href="performance.html" class="nav-link" data-text="Performance">Performance</a>
+                <a href="curiosity.html" class="nav-link" data-text="Curiosity">Curiosity</a>
+                <a href="tech.html" class="nav-link" data-text="Tech">Tech</a>
+                <a href="about.html" class="nav-link" data-text="About">About</a>
+                <a href="resume.html" class="nav-link active" data-text="Resume">Resume</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="choreography.html" class="mobile-link">Choreography</a>
+            <a href="performance.html" class="mobile-link">Performance</a>
+            <a href="curiosity.html" class="mobile-link">Curiosity</a>
+            <a href="tech.html" class="mobile-link">Tech</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="resume.html" class="mobile-link active">Resume</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <div class="header-gradient"></div>
+            <div class="header-noise"></div>
+        </div>
+
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title" data-splitting>Resume & CV</h1>
+
+
+                <div class="download-btn-wrapper">
+                    <a href="resume/Resume_Astha (2) (1).pdf" class="btn btn-primary btn-download" download>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                        </span>
+                        <span class="btn-text">Download Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Content -->
+    <section class="resume-section">
+        <div class="container">
+            <div class="resume-grid">
+                <!-- Left Column -->
+                <div class="resume-sidebar">
+                    <div class="resume-card">
+                        <h3 class="resume-card-title">Contact</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <a href="mailto:asthashreeshreemal@gmail.com">asthashreeshreemal@gmail.com</a>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                                <a href="#">@astha</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-card">
+                        <h3 class="resume-card-title">Dance Styles</h3>
+                        <div class="tags-list">
+                            <span class="tag">Hip-Hop</span>
+                            <span class="tag">Contemporary</span>
+                            <span class="tag">Bollywood</span>
+                            <span class="tag">Classical</span>
+                            <span class="tag">Fusion</span>
+                            <span class="tag">Freestyle</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-card">
+                        <h3 class="resume-card-title">Tech Skills</h3>
+                        <div class="tags-list">
+                            <span class="tag">Light Design</span>
+                            <span class="tag">Sound Design</span>
+                            <span class="tag">Video Production</span>
+                            <span class="tag">Adobe Premiere Pro</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-card">
+                        <h3 class="resume-card-title">Languages</h3>
+                        <ul class="simple-list">
+                            <li>English (Fluent)</li>
+                            <li>Hindi (Native)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="resume-main">
+                    <!-- Summary -->
+                    <div class="resume-section-block">
+                        <h2 class="resume-section-title">
+                            <span class="title-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 16v-4" />
+                                    <path d="M12 8h.01" />
+                                </svg>
+                            </span>
+                            Summary
+                        </h2>
+                        <p class="resume-summary">
+                            A multifaceted creative professional with expertise in dance, choreography, and technology.
+                            Passionate about bridging the gap between artistic expression and digital innovation.
+                            Experienced in performing, teaching, and creating unique experiences that blend
+                            movement with technology.
+                        </p>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="resume-section-block">
+                        <h2 class="resume-section-title">
+                            <span class="title-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                </svg>
+                            </span>
+                            Experience
+                        </h2>
+
+                        <div class="experience-list">
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h3>Freelance Choreographer & Performer</h3>
+                                    <span class="experience-date">2020 - Present</span>
+                                </div>
+                                <p class="experience-company">Self-Employed</p>
+                                <ul class="experience-details">
+                                    <li>Created original choreography for events, competitions, and productions</li>
+                                    <li>Performed at national and international dance festivals</li>
+                                    <li>Collaborated with artists and brands for creative projects</li>
+                                    <li>Conducted workshops and training sessions</li>
+                                </ul>
+                            </div>
+
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h3>Dance Instructor</h3>
+                                    <span class="experience-date">2018 - Present</span>
+                                </div>
+                                <p class="experience-company">Various Studios & Online</p>
+                                <ul class="experience-details">
+                                    <li>Taught multiple dance styles to students of all ages</li>
+                                    <li>Developed curriculum and training programs</li>
+                                    <li>Mentored aspiring dancers and performers</li>
+                                    <li>Conducted online classes reaching global audience</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="resume-section-block">
+                        <h2 class="resume-section-title">
+                            <span class="title-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7" />
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                                </svg>
+                            </span>
+                            Achievements
+                        </h2>
+
+                        <div class="achievements-grid">
+
+
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                </div>
+                                <h4>Students Taught</h4>
+                                <p>Trained across various dance forms and skill levels</p>
+                            </div>
+
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polygon points="10 8 16 12 10 16 10 8" />
+                                    </svg>
+                                </div>
+                                <h4>Performances</h4>
+                                <p>Live performances at festival, events, and productions</p>
+                            </div>
+
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                        <path d="M2 17l10 5 10-5" />
+                                        <path d="M2 12l10 5 10-5" />
+                                    </svg>
+                                </div>
+                                <h4>Choreographies</h4>
+                                <p>Original choreographies created for various projects and events</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="resume-section-block">
+                        <h2 class="resume-section-title">
+                            <span class="title-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                            </span>
+                            Education & Training
+                        </h2>
+
+                        <div class="education-list">
+                            <div class="education-item">
+                                <h3>San Jose State University</h3>
+                                <p>Bachelor's Degree</p>
+                            </div>
+                            <div class="education-item">
+                                <h3>Professional Dance Training</h3>
+                                <p>Extensive training in Hip-Hop, Contemporary, Bollywood, and Classical dance forms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Viewer -->
+    <section class="pdf-viewer-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Full Document</span>
+                <h2 class="section-title" data-splitting>View Resume</h2>
+            </div>
+
+            <div class="pdf-container">
+                <iframe src="resume/Resume_Astha (2) (1).pdf" width="100%" height="800px"
+                    style="border: none; border-radius: 12px;"></iframe>
+            </div>
+
+            <div class="pdf-download-cta">
+                <a href="resume/Resume_Astha (2) (1).pdf" class="btn btn-outline btn-large" download>
+                    <span class="btn-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                    </span>
+                    <span class="btn-text">Download Full Resume</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">ASTHA</span>
+                    <p>Dance + Tech Creative</p>
+                </div>
+
+                <div class="footer-center">
+                    <div class="footer-links">
+                        <a href="choreography.html">Choreography</a>
+                        <a href="performance.html">Performance</a>
+                        <a href="curiosity.html">Curiosity</a>
+                        <a href="tech.html">Tech</a>
+                        <a href="about.html">About</a>
+                        <a href="resume.html">Resume</a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Astha Shreeshreemal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
